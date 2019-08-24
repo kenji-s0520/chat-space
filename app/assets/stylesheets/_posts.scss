@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+.chatside {
+  background: #253141;
+  width: 300px;
+  height: 100vh;
+  color: #FFFFFF;
+  font-weight: bold;
+  float: left;
+  &_main{
+  height: 100px;
+  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 35px;
+  }
+  &_icon{
+  float: right;
+  }
+  &_group{
+    background: #2f3e51;
+    height: calc(100% - 100px);
+    width: 300px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  &_user{
+    font-size: 15px;
+    font-weight: bold;
+  }
+  &_comment{
+    font-size: 11px;
+    padding-top: 5px;
+    padding-bottom: 40px;
+  }
+  &_user2{
+    font-size: 15px;
+    font-weight: bold;
+  }
+  &_comment2{
+    font-size: 11px;
+    padding-top: 5px;
+    padding-bottom: 40px;
+  }
+}
+
+.chatmain{
+  height: 100px;
+  width: calc(100vw - 300px);
+  float: left;
+  border-style: solid;
+  border-width: 0px;
+  border-bottom-width: 1px;
+  border-color: #eeeeee;
+  padding-left: 40px;
+  padding-right: 40px;
+  
+  &_sample{
+    font-size: 20px;
+    color: #333333;
+    padding-top: 35px;
+  }
+  
+  &_name{
+    font-size: 12px;
+    color: #999999;
+    padding-top: 15px;
+  } 
+  
+  &_menber{
+    float: left;
+    padding-right: 5px;
+  
+  }
+  &_botton{
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    right: 40px;
+    top: 28px;
+    color: #38AEF0;
+    border-style: solid;
+    border-color: #38AEF0;
+    border-width: 1px;
+    padding: 0 20px;
+  }
+
+  &_sub{
+    float: left;
+    padding-top: 46px;
+  }
+
+  &_subtitle{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #434A54;
+    padding-bottom: 10px;
+  }
+
+  &_time{
+    display: inline-block;
+    font-size: 12px;
+    color: #999999;
+    padding-left: 5px;
+  }
+
+  &_subtalk{
+    font-size: 14px;
+    color: #434A54;
+  }
+}
+
+.chatsend{
+  background: #d8d8d8;
+  height: 80px;
+  width: calc(100vw - 300px);
+  position: absolute;
+  bottom: 0;
+  left: 300px;
+  padding-left: 40px;
+
+  &_input{
+    position: relative;
+    line-height: 80px;
+    .text{
+    height: 50px;
+    width: 85%;
+    }
+  }
+
+  &_button{
+    position: absolute;
+    bottom: 15px;
+    right: 40px;
+    .button{
+      font-size: 20px;
+      color: white;
+      width: 100px;
+      height: 50px;
+      background: #38AEF0;
+    }
+  }
+
+  &_image{
+    position: absolute;
+    right: 180px;
+    bottom: 1px;
+    font-size: 1.5em;
+    
+  }
+  .i.fa.fa-picture-o{
+    height: 25px;
+    width: 25px;
+  }
+}

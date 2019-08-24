@@ -1,0 +1,41 @@
+.chatside
+  .chatside_main
+    kenji
+    .chatside_icon
+      = fa_icon 'edit'
+      = fa_icon 'cog'
+  .chatside_group
+    .chatside_user
+      users
+    .chatside_comment
+      さようなら
+    .chatside_user2
+      users2
+    .chatside_comment2
+      hello
+.chatmain
+  .chatmain_group
+    %p.chatmain_sample groupname
+    %ul.chatmain_name
+      Member
+      %li.chatmain_menber name1
+      %li.chatmain_menber name2
+  .chatmain_botton
+    Edit
+
+  .chatmain_sub
+    %p.chatmain_subtitle sample
+    %p.chatmain_time 2019/8/20/01:01:00
+    %ul.chatmain_subtalk
+      Hello
+
+.chatsend
+  .chatsend_input
+    %input.text{placeholder: " type a message"}
+
+  .chatsend_button
+    %button.button{value: "Send"}
+      Send
+
+  .chatsend_image
+    %input.i.fa.fa-picture-o{type: "file"}
