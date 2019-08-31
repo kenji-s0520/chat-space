@@ -33,7 +33,6 @@
   .list{
   display: inline-block;
   font-size: 20px;
- 
   }
 
   .groups{
@@ -43,11 +42,11 @@
     padding-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
+    overflow: scroll;
   }
 
   .group{
     font-size: 15px;
-    // font-weight: bold;
   }
   .group__name{
     color: white;
@@ -61,112 +60,116 @@
     padding-bottom: 40px;
   }
 }
-
 .chatmain{
-  height: 100px;
+  height: 100vh;
   width: calc(100vw - 300px);
   float: left;
-  border-style: solid;
-  border-width: 0px;
-  border-bottom-width: 1px;
-  border-color: #eeeeee;
-  padding-left: 40px;
-  padding-right: 40px;
-  
-  &_sample{
+
+  &_group{
+    height: 100px;
     font-size: 20px;
-    color: #333333;
-    padding-top: 35px;
+    padding: 0 40px;
+    border-bottom: solid 1px #eee;
+    position: relative;
   }
-  
-  &_name{
+ .group__name{
+    padding-top: 35px;    
+  }
+  .group__user{
+    padding-top: 5px;
     font-size: 12px;
     color: #999999;
-    padding-top: 15px;
-  } 
-  
-  &_menber{
-    float: left;
-    padding-right: 5px;
-  
+    display: flex;
   }
-  &_botton{
+  .edit_btn{
+    text-decoration: none;
+    float: right;
     height: 40px;
     line-height: 40px;
     position: absolute;
     right: 40px;
-    top: 28px;
+    top: 5px;
     color: #38AEF0;
     border-style: solid;
     border-color: #38AEF0;
     border-width: 1px;
     padding: 0 20px;
-  }
-
-  &_sub{
-    padding-top: 46px;
-  }
-
-  &_subtitle{
-    display: inline-block;
-    font-size: 16px;
-    font-weight: bold;
-    color: #434A54;
-    padding-bottom: 10px;
-  }
-
-  &_time{
-    display: inline-block;
-    font-size: 12px;
-    color: #999999;
-    padding-left: 5px;
-  }
-
-  &_subtalk{
-    font-size: 14px;
-    color: #434A54;
+    margin-top: 30px;
   }
 }
+.messages{
+  width: 100%;
+  height: calc(100vh - 190px);
+  padding: 46px 40px;
+  background: #fafafa;
+  overflow: auto;
+}
 
-.chatsend{
+.message{
+  padding-bottom: 40px;
+}
+
+.upper-message{
+  display: flex;
+  margin-bottom: 10px;
+
+ &__user-name {
+   color: #434a54;
+   font-size: 16px;
+   font-weight: bold;
+ }
+
+ &__date{
+   color: #999999;
+   font-size: 12px;
+   margin-left: 10px;
+ }
+}
+.lower-message{
+  color: #434a54;
+  font-size: 14px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.new_message{
   background: #d8d8d8;
-  height: 80px;
+  height: 90px;
   width: calc(100vw - 300px);
   position: absolute;
-  bottom: 0;
+  // bottom: 0;
   left: 300px;
-  padding-left: 40px;
+  padding: 20px 40px;
 
-  &_input{
-    position: relative;
-    line-height: 80px;
-    .text{
+  .form__message{
     height: 50px;
     width: 85%;
-    }
+    padding: 0 40px 0 10px;
+    border-style: none;
   }
 
-  &_button{
+  .form__submit{
     position: absolute;
-    bottom: 15px;
     right: 40px;
-    .button{
-      font-size: 20px;
-      color: white;
-      width: 100px;
-      height: 50px;
-      background: #38AEF0;
-    }
+    font-size: 20px;
+    color: white;
+    width: 100px;
+    height: 50px;
+    background: #38AEF0;
+    margin-left: 15px; 
   }
 
-  &_image{
+  .form__mask{
     position: absolute;
-    right: 180px;
-    bottom: 1px;
-    font-size: 1.5em;
-    
+    top: 25px;
+    right: 220px;
+    font-size: 1.5rem;
   }
-  .i.fa.fa-picture-o{
+
+  .hidden{
+    display: none;
+  }
+
+  .fa.fa-picture-o.icon{
     height: 25px;
     width: 25px;
   }
