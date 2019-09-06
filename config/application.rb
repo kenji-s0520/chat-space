@@ -18,6 +18,7 @@ module ChatSpace
       g.test_framework false
       config.i18n.default_locale = :ja
       config.action_view.field_error_proc = Proc.new { |html_tag, instance| %Q(#{html_tag}).html_safe }
+      config.time_zone = 'Tokyo'
     end
   end
 end
