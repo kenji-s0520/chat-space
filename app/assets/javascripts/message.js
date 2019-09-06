@@ -48,9 +48,6 @@ $(document).on('turbolinks:load', function() {
     function scrollBottom(){
       var target = $('.message').last();
       var position = target.offset().top+$('.messages').scrollTop();
-      // $('.messages').animate({
-      //   scrollTop: position
-      // }, 300, 'swing');
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
     }
   })
