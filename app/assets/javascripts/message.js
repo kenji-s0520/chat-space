@@ -1,8 +1,8 @@
 $(document).on('turbolinks:load', function() {
+
   function buildHTML(message) {
-    var content = message.content ? `${ message.content }` : "";
-    var img = message.image ? `<img src= ${ message.image }>` :"";
-    var html = `<div class="message">
+    var img = message.image ? `<img src=${ message.image }>` : "";
+    var html = `<div class="message" data-message-id="${message.id}">
       <div class="upper-message">
         <div class="upper-message__user-name">
           ${message.user_name}
@@ -20,6 +20,8 @@ $(document).on('turbolinks:load', function() {
     </div>`
     return html;
   }
+
+    // 非同期通信設定
 
   $('#new_message').on('submit', function(e){
     e.preventDefault();
@@ -44,11 +46,32 @@ $(document).on('turbolinks:load', function() {
     .always(function(data){
       $('.form__submit').prop('disabled', false); 
     })
-
-    function scrollBottom(){
-      var target = $('.message').last();
-      var position = target.offset().top+$('.messages').scrollTop();
-      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
-    }
   })
+
+    // 自動更新設定
+
+  var reloadMessages = function() {
+    if (location.href.match(/\/groups\/\d+\/messages/)){
+      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+      var last_message_id = $('.message').last().data('message-id');
+      var href = 'api/messages'
+      $.ajax({
+        url: href,
+        type: 'GET',
+        dataType: 'json',
+        data: {id: last_message_id}
+      })
+      .done(function(messages) {
+        var insertHTML = '';
+        messages.forEach(function (message){
+          insertHTML = buildHTML(message);
+          $('.messages').append(insertHTML);
+          })
+        })
+      .fail(function() {
+        alert('自動更新に失敗しました。');
+      });
+    }
+  };
+  setInterval(reloadMessages, 5000);
 });
