@@ -39,7 +39,7 @@ $(document).on('turbolinks:load', function() {
       var html = buildHTML(data);
       $('.messages').append(html);
       $('form')[0].reset();
-      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
+      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
     })
     .fail(function(data){
       alert('エラーが発生したためメッセージは送信できませんでした。');
@@ -53,6 +53,7 @@ $(document).on('turbolinks:load', function() {
 
   var reloadMessages = function() {
     if (location.href.match(/\/groups\/\d+\/messages/)){
+      
       var last_message_id = $('.message').last().data('message-id');
       var href = 'api/messages'
       $.ajax({
@@ -66,6 +67,7 @@ $(document).on('turbolinks:load', function() {
         messages.forEach(function (message){
           insertHTML = buildHTML(message);
           $('.messages').append(insertHTML);
+          $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
           })
         })
       .fail(function() {
