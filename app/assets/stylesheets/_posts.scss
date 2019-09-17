@@ -4,7 +4,6 @@
 
 .chatside{
   background: #253141;
-  width: 300px;
   height: 100vh;
   color: #FFFFFF;
   float: left;
@@ -32,7 +31,7 @@
 
   .list{
   display: inline-block;
-  font-size: 20px;
+  font-size: 17px;
   }
 
   .groups{
@@ -61,7 +60,6 @@
   }
 }
 .chatmain{
-  height: 100vh;
   width: calc(100vw - 300px);
   float: left;
 
@@ -76,29 +74,26 @@
     padding-top: 35px;    
   }
   .group__user{
-    padding-top: 5px;
+    padding-top: 15px;
     font-size: 12px;
     color: #999999;
     display: flex;
   }
   .edit_btn{
     text-decoration: none;
-    float: right;
     height: 40px;
     line-height: 40px;
     position: absolute;
     right: 40px;
     top: 5px;
     color: #38AEF0;
-    border-style: solid;
+    border: solid 1px;
     border-color: #38AEF0;
-    border-width: 1px;
     padding: 0 20px;
     margin-top: 30px;
   }
 }
 .messages{
-  width: 100%;
   height: calc(100vh - 190px);
   padding: 46px 40px;
   background: #fafafa;
@@ -137,13 +132,12 @@
   height: 90px;
   width: calc(100vw - 300px);
   position: absolute;
-  // bottom: 0;
   left: 300px;
   padding: 20px 40px;
 
   .form__message{
     height: 50px;
-    width: 85%;
+    width: 960px;
     padding: 0 40px 0 10px;
     border-style: none;
   }
@@ -161,9 +155,9 @@
 
   .form__mask{
     position: absolute;
-    top: 25px;
-    right: 240px;
-    font-size: 1.5rem;
+    top: 31px;
+    right: 162px;
+    font-size: 1.3rem;
   }
 
   .hidden{
