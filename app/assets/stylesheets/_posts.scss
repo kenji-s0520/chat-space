@@ -4,6 +4,7 @@
 
 .chatside{
   background: #253141;
+  width: 300px;
   height: 100vh;
   color: #FFFFFF;
   float: left;
@@ -60,6 +61,7 @@
   }
 }
 .chatmain{
+  height: 100vh;
   width: calc(100vw - 300px);
   float: left;
 
@@ -81,6 +83,7 @@
   }
   .edit_btn{
     text-decoration: none;
+    float: right;
     height: 40px;
     line-height: 40px;
     position: absolute;
@@ -94,6 +97,7 @@
   }
 }
 .messages{
+  width: 100%;
   height: calc(100vh - 190px);
   padding: 46px 40px;
   background: #fafafa;
@@ -132,6 +136,7 @@
   height: 90px;
   width: calc(100vw - 300px);
   position: absolute;
+  // bottom: 0;
   left: 300px;
   padding: 20px 40px;
 
@@ -151,6 +156,7 @@
     height: 50px;
     background: #38AEF0;
     margin-left: 15px; 
+    padding: 0 30px;
   }
 
   .form__mask{
