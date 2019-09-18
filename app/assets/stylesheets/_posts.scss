@@ -142,7 +142,7 @@
 
   .form__message{
     height: 50px;
-    width: 960px;
+    width: 90%;
     padding: 0 40px 0 10px;
     border-style: none;
   }
@@ -156,13 +156,13 @@
     height: 50px;
     background: #38AEF0;
     margin-left: 15px; 
-    padding: 0 30px;
+    //padding: 0 30px;
   }
 
   .form__mask{
     position: absolute;
     top: 31px;
-    right: 162px;
+    right: 170px;
     font-size: 1.3rem;
   }
 
